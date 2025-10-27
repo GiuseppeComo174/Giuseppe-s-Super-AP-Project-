@@ -1,0 +1,111 @@
+
+local is_correct = false
+
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	msg.post("#", "update_score", {score = 0})
+	self.is_typing = true
+	self.is_correct = true
+	self.input_text = ""
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash "update_score" then
+		gui.set_text(gui.get_node("score"), "Answer: " .. message.score)
+	end
+end
+
+function on_input(self, action_id, action)
+
+	if action_id == hash("enter") and action.released and is_correct then 
+		self.is_typing = false
+		msg.post("math_object", "disable")
+		gui.set_text(gui.get_node("score"), "Correct!")
+		return
+	elseif action_id == hash("enter") and action.released and is_correct == false then
+		self.is_typing = true
+		gui.set_text(gui.get_node("score"), "Incorrect! (Hint: Count the number of candles in the room.)")
+	end
+
+	if action_id == hash("text_input") then
+		local user_input = action.text
+
+		local user_number = tonumber(user_input)
+
+		local correct_answer = 4
+		is_correct = false
+
+		if user_number == correct_answer then 
+			is_correct = true
+		end
+	end
+
+	if self.is_typing then
+	
+		if action.text then
+			self.input_text = self.input_text .. action.text
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		print("Input recieved: ", action_id)
+	
+		if action_id == hash("1") and action.pressed then
+			self.input_text = self.input_text .. "1"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("2") and action.pressed then
+			self.input_text = self.input_text .. "2"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("3") and action.pressed then
+			self.input_text = self.input_text .. "3"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("4") and action.pressed then
+			self.input_text = self.input_text .. "4"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("5") and action.pressed then
+			self.input_text = self.input_text .. "5"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("6") and action.pressed then
+			self.input_text = self.input_text .. "6"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("7") and action.pressed then
+			self.input_text = self.input_text .. "7"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("8") and action.pressed then
+			self.input_text = self.input_text .. "8"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("9") and action.pressed then
+			self.input_text = self.input_text .. "9"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("0") and action.pressed then
+			self.input_text = self.input_text .. "0"
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+		if action_id == hash("backspace") and action.repeated then
+			self.input_text = self.input_text:sub(1, -2)
+			gui.set_text(gui.get_node("score"), "Answer: " .. self.input_text)
+		end
+
+	
+	end
+end
+		
