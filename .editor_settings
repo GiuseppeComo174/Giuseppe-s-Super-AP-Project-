@@ -1,0 +1,171 @@
+{
+  :bundle {
+    :html5 {
+      :architectures #{
+        "wasm-web"
+      }
+      :build_report false
+      :contentless false
+      :liveupdate false
+      :texture_compression "enabled"
+      :variant "debug"
+      :with_symbols true
+    }
+    :last-bundle-command :project.bundle-windows
+    :output-directory "C:\\Users\\GCOM5285\\Downloads\\Defold-x86_64-win32\\Defold"
+    :windows {
+      :build_report false
+      :contentless false
+      :liveupdate false
+      :platform "x86_64-win32"
+      :texture_compression "enabled"
+      :variant "debug"
+      :with_symbols true
+    }
+  }
+  :scene {
+    :grid {
+      :active-plane :z
+      :color [
+        0.5
+        0.5
+        0.5
+        1.0
+      ]
+      :opacity 0.25
+      :size {
+        :x 1.0
+        :y 1.0
+        :z 1.0
+      }
+    }
+  }
+  :workflow {
+    :recent-files [
+      [
+        "/README.md"
+        :html
+      ]
+      [
+        "/Assets/Images/children-different-positions-isolated-white-background.zip"
+        :code
+      ]
+      [
+        "/texturepacker/editor/resources/templates/template.tpatlas"
+        :scene
+      ]
+      [
+        "/Assets/Home.atlas"
+        :scene
+      ]
+      [
+        "/Assets/Images/main.atlas"
+        :scene
+      ]
+      [
+        "/builtins/fonts/debug/always_on_top_font.material"
+        :cljfx-form-view
+      ]
+      [
+        "/Assets/Practice Tilemap.tilemap"
+        :scene
+      ]
+      [
+        "/builtins/graphics/particle_blob.tilesource"
+        :scene
+      ]
+      [
+        "/Assets/Images/Stone Sprite.tilesource"
+        :scene
+      ]
+      [
+        "/Assets/Images/Running.sprite"
+        :scene
+      ]
+      [
+        "/Assets/Run.camera"
+        :cljfx-form-view
+      ]
+      [
+        "/main/Assets/player_controller.script.script"
+        :code
+      ]
+      [
+        "/Assets/Labyrinth.tilemap"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/Assets/player_controller.script"
+        :code
+      ]
+      [
+        "/main/Assets/Roboto.zip"
+        :code
+      ]
+      [
+        "/main/Assets/Roboto.font"
+        :scene
+      ]
+      [
+        "/main/Assets/Text.material"
+        :cljfx-form-view
+      ]
+      [
+        "/main/Assets/Textbox.gui"
+        :scene
+      ]
+      [
+        "/main/Assets/Test.gui"
+        :scene
+      ]
+      [
+        "/main/Assets/Text.gui_script"
+        :code
+      ]
+      [
+        "/main/Assets/Labyrinth.tilemap"
+        :scene
+      ]
+      [
+        "/main/Assets/Images/Stone Sprite.tilesource"
+        :scene
+      ]
+      [
+        "/input/game.input_binding"
+        :cljfx-form-view
+      ]
+      [
+        "/main/Assets/Images/main.atlas"
+        :scene
+      ]
+      [
+        "/main/main.gui"
+        :scene
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/Scripts/button.script"
+        :code
+      ]
+      [
+        "/Scripts/player_controller.script"
+        :code
+      ]
+      [
+        "/main/main.gui_script"
+        :code
+      ]
+      [
+        "/main/Assets/main.collection"
+        :scene
+      ]
+    ]
+  }
+}
